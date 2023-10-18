@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/fav-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>علی پنل</title>
+</head>
+<body dir="rtl">
+   <section class="main d-flex flex-lg-column position-relative">
+       <!-- Content-Section -->
+       <section class="contents ">
+
+           <section class="header-iner d-flex justify-content-between px-4 pt-3 pb-3 border border-2 border-dark">
+               <section class="search-box d-flex">
+                <section class="menu-btn mt-3 ps-3 d-lg-none">
+                    <i id="bars" class="fa-solid fa-bars"></i>
+                </section>
+                   <form action="#" class=" d-flex search-form border border-1 border-dark">
+                    <div class="search-field mt-2">
+                       <input type="text" name="" id="" placeholder="اینجا جستجو کنید...">
+                    </div>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass mt-2"></i>
+                    </button>
+                   </form>
+               </section>
+               <section class="profile-section d-flex">
+                   <section class="profile-info">
+                       <img id="hide" class="profile-img" src="./assets/images/client_img.png" alt="">
+                       <div class="profile-info-iner p-3">
+                           <p>خوش آمدید</p>
+                           <h5>علیرضا فهیمی</h5>
+                           <hr id="profile-line">
+                           <div class="profile-info-details">
+                               <a href="#">
+                                   <i class="fa-solid fa-user"></i>
+                                   پروفایل من
+                               </a>
+                               <a href="#">
+                                   <i class="fa-solid fa-gear"></i>
+                                   تنظیمات
+                               </a>
+                               <a href="#">
+                                   <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                   خروج
+                               </a>
+                           </div>
+                       </div>
+                   </section>
+                   <section class="header-notification d-flex justify-content-between d-none d-lg-flex">
+                       <li>
+                           <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#">
+                            <i class="fa-solid fa-comment"></i>
+                           </a>
+                       </li>
+                   </section>
+               </section>
+           </section>
+
+
+           <!-- Main Contents -->
+           <section class=" mt-3 border border-2 border-dark content-section" style="height: auto; width: 100%; background-color: #fff;">
+            <div class="content-container border">
+                <p class="bilboard">
+                    محتوا
+                </p>
+            </div>
+           </section>
+       </section>
+
+
+       <!-- Side-Section -->
+       <section id="id1" class="fix-switch">
+        <i class="fa-solid fa-xmark  menu-close d-lg-none"></i>
+           <section class="switch px-3 py-4">
+               <section class="logo px-2 py-2 text-center">
+                   <img class="w-100" src="./assets/images/logo.png" alt="">
+               </section>
+               <section class="lists mt-5">
+                   <ul class="first-ul px-1 mt-4">
+                       <li class="first-li first">
+                                <i class="fa-solid fa-house"></i>
+                                <span>داشبورد</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="avvali-ul">
+                                    <a href="#">
+                                        <li class="second-li my-3 ">
+                                            کلاسیک
+                                        </li>
+                                    </a>
+                                    <a href="#" >
+                                        <li class="second-li my-3 ">
+                                            حداقل
+                                        </li>
+                                    </a>
+                                </ul>
+                       </li>
+                       <li class="first-li second">
+                                <i class="fa-solid fa-cube"></i>
+                                <span>برنامه های کاربردی</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="second-ul">
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            صندوق پستی
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            گفتگو
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            FAQ
+                                        </li>
+                                    </a>
+                                </ul>
+                       </li>
+                       <li class="first-li third">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>صفحات</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="third-ul">
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            وارد شدن
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            فعال سازی
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="second-li my-3">
+                                            فراموشی رمز عبور
+                                        </li>
+                                    </a>
+                                </ul>
+                       </li>
+                   </ul>
+               </section>
+           </section>
+       </section>
+
+
+
+
+
+   </section>
+   <script>
+       $(".profile-info-iner").hide();
+       $(".avvali-ul").hide();
+       $(".second-ul").hide();
+       $(".third-ul").hide();
+      
+       $("#hide").click(function(){
+        //  $(".profile-info-iner").hide(1000); 
+        $(".profile-info-iner").fadeToggle(500)
+        });
+
+        $('#bars').click(function(){
+            $("#id1").show(1000); 
+        });
+
+
+        function openClose(myElement)
+        {
+            $(myElement).toggle(700);
+        }
+        $(".third").click(function(){
+        let MyElement = document.querySelector(".third-ul");
+        openClose(MyElement);
+        });
+        $(".second").click(function(){
+        let MyElement = document.querySelector(".second-ul");
+        openClose(MyElement);
+        });
+        $(".first").click(function(){
+        let MyElement = document.querySelector(".avvali-ul");
+        openClose(MyElement);
+        });
+   </script>
+</body>
+</html>
