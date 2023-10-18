@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3B82F6" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/roocket.ico" />
+    <title>دوره های آموزشی | آموزش برنامه نویسی</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <meta
+      name="description"
+      content="آموزش برنامه نویسی یکی از حوزه‌ها مهم فعالیت مجموعه راکت است که در قالب دوره‌های آموزش مختلف به شما برنامه نویسی آموزش خواهیم داد."
+    />
+    <meta
+      name="keywords"
+      content="آموزش طراحی سایت,آموزش برنامه نویسی,طراحی وب,ساخت وب سایت,آموزش git,آموزش لاراول,آموزش php,آموزش react,آموزش پی اچ پی,آموزش laravel,آموزش جاوا اسکریپت,آموزش ساخت وب سایت,آموزش بوت استرپ,آموزش mvc,آموزش React Native,راکت"
+    />
+    <link rel="canonical" href="https://roocket.ir" />
+    <meta property="og:title" content="آموزش برنامه نویسی - راکت" />
+    <meta
+      property="og:description"
+      content="آموزش برنامه نویسی یکی از حوزه‌ها مهم فعالیت مجموعه راکت است که در قالب دوره‌های آموزش مختلف به شما برنامه نویسی آموزش خواهیم داد."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roocket.ir" />
+    <meta property="og:site_name" content="وبسایت آموزشی راکت" />
+    <meta property="og:brand" content="راکت" />
+    <meta property="og:locale" content="fa" />
+    <meta
+      property="og:image"
+      content="https://roocket.ir/public/images/2020/7/30/roocket.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/card.css" />
+  </head>
+  <body>
+    <!-- start notification -->
+    <section
+      class="container alert-box d-flex justify-content-between align-items-center mt-3 rounded px-5 py-3"
+    >
+      <div
+        class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+      >
+        <i class="fa fa-align-center"></i>
+        <span class="mx-4 text-center my-3 my-lg-0">
+          روزت بخیر علیرضا فهیمی؛ ماموریت‌های انجام نشده‌ای داری. اونا رو بررسی
+          کن و انجام بده
+        </span>
+        <a href="#" class="rounded border px-2 py-1">
+          <span class="text-light">مشاهده ماموریت ها</span>
+          <i class="fa fa-left-long"></i>
+        </a>
+      </div>
+      <i class="fa fa-circle-xmark" id="close-alert-btn"></i>
+    </section>
+    <!-- end notification -->
+    <!-- sidebar menu -->
+    <div class="sidebar-menu position-absolute px-3 py-3" id="sidebar-menu">
+      <div class="text-start close" id="menu-close">
+        <i class="fa fa-times fs-3 text-light" aria-hidden="true"></i>
+      </div>
+      <div class="my-3">
+        <a href="#" class="">
+          <svg
+            class="hidden sm:dark:inline-block"
+            width="203"
+            height="46"
+            viewBox="0 0 203 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class=""
+              d="M56.7434 30.6068L50.6089 24.5795H42.3797V30.6068H38.7888V9.56836H54.125C57.6037 9.56836 60.5587 13.0179 60.5587 17.074C60.5587 20.3719 58.5388 23.4044 55.7708 24.3142L55.4716 24.4279L61.7183 30.6447H56.7434V30.6068ZM42.3797 20.5235H53.9754C55.5838 20.5235 57.0052 18.8935 57.0052 17.036C57.0052 15.1407 55.6212 13.5865 53.9754 13.5865H42.3797V20.5235Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M75.448 31.0177C68.0418 31.0177 63.7776 27.227 63.7776 20.5933V19.5319C63.7776 12.8981 68.0418 9.10742 75.448 9.10742C82.8542 9.10742 87.1184 12.8981 87.1184 19.5319V20.5933C87.1184 27.227 82.8542 31.0177 75.448 31.0177ZM75.448 13.3909C71.2586 13.3909 67.3685 14.1491 67.3685 19.6456V20.5174C67.3685 26.014 71.2586 26.7721 75.448 26.7721C79.4504 26.7721 83.5649 26.014 83.5649 20.5174V19.6456C83.5649 14.1112 79.4504 13.3909 75.448 13.3909Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M101.743 31.0177C94.3364 31.0177 90.0723 27.227 90.0723 20.5933V19.5319C90.0723 12.8981 94.3364 9.10742 101.743 9.10742C109.149 9.10742 113.413 12.8981 113.413 19.5319V20.5933C113.413 27.227 109.186 31.0177 101.743 31.0177ZM101.743 13.3909C97.5533 13.3909 93.6632 14.1491 93.6632 19.6456V20.5174C93.6632 26.014 97.5533 26.7721 101.743 26.7721C105.745 26.7721 109.86 26.014 109.86 20.5174V19.6456C109.86 14.1112 105.782 13.3909 101.743 13.3909Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M191.441 30.6068V13.8139H183.511V9.56836H202.962V13.8139H195.032V30.6068H191.441Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M128.003 30.944C124.524 30.944 116.445 29.9205 116.445 20.5954V19.4961C116.445 10.171 124.524 9.14746 128.003 9.14746C133.352 9.14746 135.372 10.2468 135.746 10.5121V14.0375C134.885 13.7342 131.893 12.7865 128.003 12.7865C122.916 12.7865 120.223 15.1368 120.223 19.6098V20.5196C120.223 24.9926 122.916 27.3428 128.003 27.3428C131.893 27.3428 134.885 26.3952 135.746 26.0919V29.6173C135.372 29.8447 133.352 30.944 128.003 30.944Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M153.475 30.4963L142.964 20.6405V30.4963H139.187V9.64746H142.964V19.6928L153.251 9.64746L159.348 9.64746L148.239 20.0719L159.984 30.4963H153.475Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M162.152 30.4963V9.64746H180.593V13.2107H165.93V18.3661H179.508V21.7398H165.93V26.8952H180.593V30.4963H162.152Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M200.232 5.17373H199.259V7.44816H199.035V5.17373H198.025V4.94629H200.269V5.17373H200.232Z"
+              fill="white"
+            ></path>
+            <path
+              class=""
+              d="M202.738 4.94629H203V7.44816H202.776V5.74234C202.776 5.70443 202.776 5.59071 202.776 5.36327C202.551 5.85606 202.289 6.38676 201.953 6.95537H201.728C201.392 6.42467 201.092 5.89397 200.868 5.36327C200.868 5.43908 200.868 5.59071 200.868 5.74234V7.44816H200.644V4.94629H200.905C201.13 5.47699 201.429 6.0835 201.803 6.72792C202.215 6.0835 202.514 5.47699 202.738 4.94629Z"
+              fill="white"
+            ></path>
+            <path
+              d="M14.4049 45.0127L9.16821 37.2796L14.4049 31.9727L19.6042 37.2796L14.4049 45.0127Z"
+              fill="#FF8429"
+            ></path>
+            <path
+              d="M28.802 15.5175L28.802 33.0306L21.6202 27.4961C21.6202 27.4961 22.4057 20.6729 22.5553 15.4796C22.6301 12.9019 20.2736 10.7412 14.401 7.82237C8.56579 10.7791 6.20926 12.9398 6.28407 15.5175C6.39629 20.6729 7.2192 27.534 7.2192 27.534L0 33.0306L0 15.5175C0 12.4091 1.30918 9.604 3.85274 7.21586C5.64819 5.51004 8.11693 3.91795 11.8949 2.0605L14.4384 0.80957L16.982 2.0605C20.7225 3.91795 23.2286 5.51004 25.0241 7.21586C27.5302 9.604 28.802 12.4091 28.802 15.5175Z"
+              fill="#E81C4D"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <form class="search-box my-5">
+        <input
+          type="text"
+          name="search"
+          class="w-100 search-input rounded border-0 fs-6 px-5 py-2"
+          placeholder="دنبال چی میگردی؟"
+          autocomplete="off"
+        />
+        <button class="search-btn border-0">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <div class="hr"></div>
+      <nav class="navbar py-2 navbar-dark bg-dark rounded-bottom-4">
+        <div
+          class="navbar-collapse justify-content-center"
+          id="navbarNavDropdown"
+        >
+          <ul
+            class="navbar-nav side-nav justify-content-between align-items-start"
+          >
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#">
+                <i class="fa fa-home"></i>
+                راکت
+              </a>
+            </li>
+            <li class="nav-item my-2 dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa fa-play border border-1 rounded py-1 px-2"></i>
+                دوره های آموزشی
+              </a>
+              <div
+                class="dropdown-menu px-2 border-0 pe-2"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  برنامه نویسی
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  سخت افزار
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  ICDL
+                </a>
+              </div>
+            </li>
+            <li class="nav-item my-2 active">
+              <a class="nav-link" href="#">
+                <i class="fa fa-comments ms-1" aria-hidden="true"></i>
+                پرسش و پاسخ ها</a
+              >
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#">
+                <i class="fa fa-newspaper ms-1"></i>
+                مقالات
+              </a>
+            </li>
+            <li class="nav-item my-2">
+              <a class="nav-link" href="#">
+                <i class="fa fa-microphone ms-1"></i>
+                راکت کست</a
+              >
+            </li>
+
+            <li class="nav-item my-2 dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="fa fa-link border-1 rounded py-1"></i>
+                لینک های مفید
+              </a>
+              <div
+                class="dropdown-menu px-2 border-0 pe-2"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  برنامه نویسی
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  سخت افزار
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-dot-circle"></i>
+                  ICDL
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <header>
+      <!-- start header -->
+      <div class="container header-container">
+        <!-- start header -->
+        <!-- first header -->
+        <div
+          class="d-flex align-items-center justify-content-between mt-3 top-header px-5 py-4 rounded-4"
+        >
+          <!-- hamberger -->
+          <a href="#" class="d-lg-none" id="menu-toggle">
+            <svg
+              width="24"
+              class="text-light"
+              height="18"
+              viewBox="0 0 24 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2.5H21.5M2 9H21.5M2 15.5H21.5"
+                stroke="currentColor"
+                stroke-width="3.65625"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <!-- logo -->
+          <a href="#" class="text-center d-md-none">
+            <img src="./assets/images/roocket.png" alt="" />
+          </a>
+          <!-- lg logo -->
+          <a href="#" class="d-none d-md-block">
+            <svg
+              class="hidden sm:dark:inline-block"
+              width="203"
+              height="46"
+              viewBox="0 0 203 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class=""
+                d="M56.7434 30.6068L50.6089 24.5795H42.3797V30.6068H38.7888V9.56836H54.125C57.6037 9.56836 60.5587 13.0179 60.5587 17.074C60.5587 20.3719 58.5388 23.4044 55.7708 24.3142L55.4716 24.4279L61.7183 30.6447H56.7434V30.6068ZM42.3797 20.5235H53.9754C55.5838 20.5235 57.0052 18.8935 57.0052 17.036C57.0052 15.1407 55.6212 13.5865 53.9754 13.5865H42.3797V20.5235Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M75.448 31.0177C68.0418 31.0177 63.7776 27.227 63.7776 20.5933V19.5319C63.7776 12.8981 68.0418 9.10742 75.448 9.10742C82.8542 9.10742 87.1184 12.8981 87.1184 19.5319V20.5933C87.1184 27.227 82.8542 31.0177 75.448 31.0177ZM75.448 13.3909C71.2586 13.3909 67.3685 14.1491 67.3685 19.6456V20.5174C67.3685 26.014 71.2586 26.7721 75.448 26.7721C79.4504 26.7721 83.5649 26.014 83.5649 20.5174V19.6456C83.5649 14.1112 79.4504 13.3909 75.448 13.3909Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M101.743 31.0177C94.3364 31.0177 90.0723 27.227 90.0723 20.5933V19.5319C90.0723 12.8981 94.3364 9.10742 101.743 9.10742C109.149 9.10742 113.413 12.8981 113.413 19.5319V20.5933C113.413 27.227 109.186 31.0177 101.743 31.0177ZM101.743 13.3909C97.5533 13.3909 93.6632 14.1491 93.6632 19.6456V20.5174C93.6632 26.014 97.5533 26.7721 101.743 26.7721C105.745 26.7721 109.86 26.014 109.86 20.5174V19.6456C109.86 14.1112 105.782 13.3909 101.743 13.3909Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M191.441 30.6068V13.8139H183.511V9.56836H202.962V13.8139H195.032V30.6068H191.441Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M128.003 30.944C124.524 30.944 116.445 29.9205 116.445 20.5954V19.4961C116.445 10.171 124.524 9.14746 128.003 9.14746C133.352 9.14746 135.372 10.2468 135.746 10.5121V14.0375C134.885 13.7342 131.893 12.7865 128.003 12.7865C122.916 12.7865 120.223 15.1368 120.223 19.6098V20.5196C120.223 24.9926 122.916 27.3428 128.003 27.3428C131.893 27.3428 134.885 26.3952 135.746 26.0919V29.6173C135.372 29.8447 133.352 30.944 128.003 30.944Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M153.475 30.4963L142.964 20.6405V30.4963H139.187V9.64746H142.964V19.6928L153.251 9.64746L159.348 9.64746L148.239 20.0719L159.984 30.4963H153.475Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M162.152 30.4963V9.64746H180.593V13.2107H165.93V18.3661H179.508V21.7398H165.93V26.8952H180.593V30.4963H162.152Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M200.232 5.17373H199.259V7.44816H199.035V5.17373H198.025V4.94629H200.269V5.17373H200.232Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M202.738 4.94629H203V7.44816H202.776V5.74234C202.776 5.70443 202.776 5.59071 202.776 5.36327C202.551 5.85606 202.289 6.38676 201.953 6.95537H201.728C201.392 6.42467 201.092 5.89397 200.868 5.36327C200.868 5.43908 200.868 5.59071 200.868 5.74234V7.44816H200.644V4.94629H200.905C201.13 5.47699 201.429 6.0835 201.803 6.72792C202.215 6.0835 202.514 5.47699 202.738 4.94629Z"
+                fill="white"
+              ></path>
+              <path
+                d="M14.4049 45.0127L9.16821 37.2796L14.4049 31.9727L19.6042 37.2796L14.4049 45.0127Z"
+                fill="#FF8429"
+              ></path>
+              <path
+                d="M28.802 15.5175L28.802 33.0306L21.6202 27.4961C21.6202 27.4961 22.4057 20.6729 22.5553 15.4796C22.6301 12.9019 20.2736 10.7412 14.401 7.82237C8.56579 10.7791 6.20926 12.9398 6.28407 15.5175C6.39629 20.6729 7.2192 27.534 7.2192 27.534L0 33.0306L0 15.5175C0 12.4091 1.30918 9.604 3.85274 7.21586C5.64819 5.51004 8.11693 3.91795 11.8949 2.0605L14.4384 0.80957L16.982 2.0605C20.7225 3.91795 23.2286 5.51004 25.0241 7.21586C27.5302 9.604 28.802 12.4091 28.802 15.5175Z"
+                fill="#E81C4D"
+              ></path>
+            </svg>
+          </a>
+          <!-- search -->
+          <form class="search-box d-none d-lg-block">
+            <input
+              type="text"
+              name="search"
+              class="w-100 search-input rounded border-0 fs-6 px-5 py-2"
+              placeholder="دنبال چی میگردی؟"
+              autocomplete="off"
+            />
+            <button class="search-btn border-0">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+          <!-- login -->
+          <div class="d-felx justify-content-center py-1 rounded be-direct">
+            <a href="#" class="be-login rounded px-2 py-1">
+              <span class="d-none d-md-inline">ورود </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                fill="currentColor"
+                class="bi bi-box-arrow-in-right d-md-none"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                />
+              </svg>
+              <!-- lg -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-in-right d-none d-md-inline"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="d-none d-md-inline be-subscribe rounded px-2 py-1"
+            >
+              عضویت
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person-plus-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- second header -->
+        <div class="container px-5 d-none d-lg-block">
+          <!-- nav -->
+          <nav
+            class="navbar py-2 navbar-expand-lg navbar-dark bg-dark rounded-bottom-4"
+          >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNavDropdown"
+            >
+              <ul class="navbar-nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">راکت</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    دوره های آموزشی
+                  </a>
+                  <div
+                    class="dropdown-menu px-2"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a class="dropdown-item" href="#">برنامه نویسی</a>
+                    <a class="dropdown-item" href="#">سخت افزار</a>
+                    <a class="dropdown-item" href="#">ICDL</a>
+                  </div>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">پرسش و پاسخ ها</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">مقالات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">راکت کست</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- end header -->
+    </header>
+    <div class="x w-100 intro-section"></div>
+    <!-- end header -->
+    <main class="py-5 bg-dark">
+      <section class="container">
+        <section class="text-end series-title">
+          <h1>دوره های آموزشی</h1>
+          <p>دوره ببین تمرین کن برنامه نویس شو</p>
+        </section>
+
+        <section class="mt-5 row">
+          <!-- filters -->
+          <div class="filters text-center col-lg-3 d-none d-lg-block">
+            <!-- start filter -->
+            <div class="filter px-4 py-3 rounded d-flex">
+              <span class="">دوره های جاری</span>
+              <div class="form-check form-switch ms-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                  checked
+                />
+              </div>
+              <span class="text-disabled">آرشیو</span>
+            </div>
+            <!-- end filter -->
+
+            <!-- start filter -->
+            <div class="filter px-4 py-3 rounded mt-4">
+              <p class="font-weight-900 text-e">نوع دوره</p>
+              <hr />
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="xx1"
+                  id="xx1"
+                  value="all"
+                  checked
+                />
+                <label class="form-check-label" for="xx1"> همه </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="free"
+                />
+                <label class="form-check-label" for="exampleRadios1">
+                  رایگان
+                </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  value="cache"
+                />
+                <label class="form-check-label" for="exampleRadios2">
+                  نقدی
+                </label>
+              </div>
+            </div>
+            <!-- end filter -->
+
+            <!-- start filter -->
+            <div class="filter px-4 py-3 rounded mt-4">
+              <p class="font-weight-900">مرتب سازی بر اساس</p>
+              <hr />
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="radio1"
+                  id="radio1"
+                  value="all"
+                  checked
+                />
+                <label class="form-check-label" for="radio1"> جدیدترین </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios1"
+                  value="free"
+                />
+                <label class="form-check-label" for="exampleRadios1">
+                  درحال برگزاری
+                </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  value="cache"
+                />
+                <label class="form-check-label" for="exampleRadios2">
+                  قدیمی ترین
+                </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="radio4"
+                  id="radio4"
+                  value="x"
+                />
+                <label class="form-check-label" for="rafio4">
+                  تکمیل شده ها
+                </label>
+              </div>
+            </div>
+            <!-- end filter -->
+
+            <!-- start filter -->
+            <div class="filter px-4 py-3 rounded mt-4">
+              <p class="font-weight-900">دسته دوره</p>
+              <hr />
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  سخت افزار
+                </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  برنامه نویسی
+                </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="check3"
+                />
+                <label class="form-check-label" for="check3"> ویندوز </label>
+              </div>
+              <div class="form-check text-end">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="check4"
+                />
+                <label class="form-check-label" for="check4">
+                  پایگاه داده
+                </label>
+              </div>
+            </div>
+            <!-- end filter -->
+            <!-- start filter -->
+            <div class="filter px-4 py-3 rounded mt-4 text-center">
+              <img src="./assets/images/course-certificate.png" alt="" />
+              <p class="font-weight-900">گواهی پایان دوره</p>
+              <p class="opacity-75">
+                شما می‌توانید در پایان هر دوره از راکت گواهی پایان دوره به همراه
+                گواهی تاییدیه فنی دریافت کنید، برای مطالعه جزئیات بیشتر به صفحه
+                زیر مراجعه کنید.
+              </p>
+              <a href="#" class="color-primary">گواهی پایان دوره چیست؟</a>
+            </div>
+            <!-- end filter -->
+          </div>
+          <!-- end filters -->
+          <!-- courses -->
+          <div class="course-container col-12 col-lg-9">
+            <div
+              class="cards-container row d-lg-flex justify-content-lg-end align-items-lg-start flex-lg-wrap"
+            >
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+              <!-- start card -->
+              <div class="card-container col-12 col-sm-6 col-md-4">
+                <a href="/" class="hero-image-container">
+                  <img
+                    class="hero-image"
+                    src="https://i.postimg.cc/NfR2yhNs/image-equilibrium.jpg"
+                    alt="Spinning glass cube"
+                  />
+                </a>
+                <main class="main-content">
+                  <h2 class="mt-4"><a href="#">آموزش PHP MVC</a></h2>
+                  <p>
+                    آموزش php mvc سعی دارد قدم به قدم و در قالب ساخت یک فریمورک
+                    از صفر کار با الگو mvc را به شکل کامل به شما آموزش دهد.
+                  </p>
+                  <div class="flex-row">
+                    <div class="flex-row">
+                      <div
+                        class="course-view-container ms-1 d-flex align-items-center rounded px-1 py-2"
+                      >
+                        <i class="fa fa-eye mx-1"></i>
+                        <span class="course-view">122</span>
+                      </div>
+                      <div
+                        class="time-left d-flex rounded align-items-center px-1 py-2"
+                      >
+                        <i class="fa fa-clock px-1"></i>
+                        <span>4:30:44</span>
+                      </div>
+                    </div>
+                    <div class="course-price-container">
+                      <i class="fa fa-dollar-sign"></i>
+                      <span>رایگان</span>
+                    </div>
+                  </div>
+                </main>
+                <div class="card-attribute mt-3">
+                  <a href="#" class="course-redirect-link">
+                    مشاهده اطلاعات دوره
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+          </div>
+          <!-- end courses -->
+        </section>
+      </section>
+    </main>
+
+    <!-- start footer -->
+    <footer class="pt-5">
+      <div class="container py-5">
+        <div
+          class="footer-top d-flex flex-column text-center flex-md-row justify-content-md-between align-items-md-baseline"
+        >
+          <!-- logo -->
+          <a href="#" class="">
+            <svg
+              class="hidden sm:dark:inline-block"
+              width="203"
+              height="46"
+              viewBox="0 0 203 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class=""
+                d="M56.7434 30.6068L50.6089 24.5795H42.3797V30.6068H38.7888V9.56836H54.125C57.6037 9.56836 60.5587 13.0179 60.5587 17.074C60.5587 20.3719 58.5388 23.4044 55.7708 24.3142L55.4716 24.4279L61.7183 30.6447H56.7434V30.6068ZM42.3797 20.5235H53.9754C55.5838 20.5235 57.0052 18.8935 57.0052 17.036C57.0052 15.1407 55.6212 13.5865 53.9754 13.5865H42.3797V20.5235Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M75.448 31.0177C68.0418 31.0177 63.7776 27.227 63.7776 20.5933V19.5319C63.7776 12.8981 68.0418 9.10742 75.448 9.10742C82.8542 9.10742 87.1184 12.8981 87.1184 19.5319V20.5933C87.1184 27.227 82.8542 31.0177 75.448 31.0177ZM75.448 13.3909C71.2586 13.3909 67.3685 14.1491 67.3685 19.6456V20.5174C67.3685 26.014 71.2586 26.7721 75.448 26.7721C79.4504 26.7721 83.5649 26.014 83.5649 20.5174V19.6456C83.5649 14.1112 79.4504 13.3909 75.448 13.3909Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M101.743 31.0177C94.3364 31.0177 90.0723 27.227 90.0723 20.5933V19.5319C90.0723 12.8981 94.3364 9.10742 101.743 9.10742C109.149 9.10742 113.413 12.8981 113.413 19.5319V20.5933C113.413 27.227 109.186 31.0177 101.743 31.0177ZM101.743 13.3909C97.5533 13.3909 93.6632 14.1491 93.6632 19.6456V20.5174C93.6632 26.014 97.5533 26.7721 101.743 26.7721C105.745 26.7721 109.86 26.014 109.86 20.5174V19.6456C109.86 14.1112 105.782 13.3909 101.743 13.3909Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M191.441 30.6068V13.8139H183.511V9.56836H202.962V13.8139H195.032V30.6068H191.441Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M128.003 30.944C124.524 30.944 116.445 29.9205 116.445 20.5954V19.4961C116.445 10.171 124.524 9.14746 128.003 9.14746C133.352 9.14746 135.372 10.2468 135.746 10.5121V14.0375C134.885 13.7342 131.893 12.7865 128.003 12.7865C122.916 12.7865 120.223 15.1368 120.223 19.6098V20.5196C120.223 24.9926 122.916 27.3428 128.003 27.3428C131.893 27.3428 134.885 26.3952 135.746 26.0919V29.6173C135.372 29.8447 133.352 30.944 128.003 30.944Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M153.475 30.4963L142.964 20.6405V30.4963H139.187V9.64746H142.964V19.6928L153.251 9.64746L159.348 9.64746L148.239 20.0719L159.984 30.4963H153.475Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M162.152 30.4963V9.64746H180.593V13.2107H165.93V18.3661H179.508V21.7398H165.93V26.8952H180.593V30.4963H162.152Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M200.232 5.17373H199.259V7.44816H199.035V5.17373H198.025V4.94629H200.269V5.17373H200.232Z"
+                fill="white"
+              ></path>
+              <path
+                class=""
+                d="M202.738 4.94629H203V7.44816H202.776V5.74234C202.776 5.70443 202.776 5.59071 202.776 5.36327C202.551 5.85606 202.289 6.38676 201.953 6.95537H201.728C201.392 6.42467 201.092 5.89397 200.868 5.36327C200.868 5.43908 200.868 5.59071 200.868 5.74234V7.44816H200.644V4.94629H200.905C201.13 5.47699 201.429 6.0835 201.803 6.72792C202.215 6.0835 202.514 5.47699 202.738 4.94629Z"
+                fill="white"
+              ></path>
+              <path
+                d="M14.4049 45.0127L9.16821 37.2796L14.4049 31.9727L19.6042 37.2796L14.4049 45.0127Z"
+                fill="#FF8429"
+              ></path>
+              <path
+                d="M28.802 15.5175L28.802 33.0306L21.6202 27.4961C21.6202 27.4961 22.4057 20.6729 22.5553 15.4796C22.6301 12.9019 20.2736 10.7412 14.401 7.82237C8.56579 10.7791 6.20926 12.9398 6.28407 15.5175C6.39629 20.6729 7.2192 27.534 7.2192 27.534L0 33.0306L0 15.5175C0 12.4091 1.30918 9.604 3.85274 7.21586C5.64819 5.51004 8.11693 3.91795 11.8949 2.0605L14.4384 0.80957L16.982 2.0605C20.7225 3.91795 23.2286 5.51004 25.0241 7.21586C27.5302 9.604 28.802 12.4091 28.802 15.5175Z"
+                fill="#E81C4D"
+              ></path>
+            </svg>
+          </a>
+          <!-- line -->
+          <div class="hr fhr w-50 d-none d-lg-block"></div>
+          <!-- social links -->
+          <div class="social-links mt-3 mt-lg-0">
+            <a class="social-item mx-1 p-2 rounded" href="#">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a class="social-item mx-1 p-2 rounded" href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a class="social-item mx-1 p-2 rounded" href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="social-item mx-1 p-2 rounded" href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a class="social-item mx-1 p-2 rounded" href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <!-- end footer top -->
+        <div class="row mt-5">
+          <!-- about -->
+          <div class="about-section col-12 text-center text-md-end col-md-4">
+            <div>
+              <h5>درباره راکت</h5>
+              <p class="">
+                راکت یکی از پرتلاش‌ترین و بروزترین وبسایت های آموزشی در سطح
+                ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین
+                مقالات و دوره‌های آموزشی را در اختیار علاقه‌مندان ایرانی قرار
+                دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین برنامه نویسان
+                جهان هدف ماست.
+              </p>
+              <a href="#">
+                مشاهده اطلاعات مسیر یاد گیری
+                <i class="fa fa-angle-left"></i>
+              </a>
+            </div>
+            <form class="form mt-3 mt-md-5 position-relative" action="">
+              <input
+                class="email-input w-100 rounded rounded-4 rounded px-3 py-1"
+                placeholder="برای اطلاع از جدیدترین اخبار ایمیل خود را وارد کنید"
+                type="email"
+              />
+              <button class="position-absolute email-submit px-3 py-1 rounded">
+                ثبت ایمیل
+              </button>
+            </form>
+          </div>
+          <!-- site sections -->
+          <div
+            class="site-sections col-12 text-center text-md-end col-md-4 text-end pe-4 mt-5 mt-md-0"
+          >
+            <h5 class="">بخش های سایت</h5>
+            <a class="section-item d-block" href="#">قوانین و مقررات</a>
+            <a class="section-item d-block" href="#">قوانین و مقررات</a>
+            <a class="section-item d-block" href="#">ارتباط با ما</a>
+            <a class="section-item d-block" href="#">درباره راکت</a>
+          </div>
+          <!-- contact -->
+          <div
+            class="col-12 text-center text-md-end col-md-4 text-start contact-section"
+          >
+            <h5 class="text-center text-md-end mb-3 mt-5 mt-md-0">
+              ارتباط با ما
+            </h5>
+            <div class="d-flex justify-content-between contact-item">
+              <span>
+                <i class="fa fa-envelope ps-1" aria-hidden="true"></i>
+                ایمیل
+              </span>
+              <a href="#">info@roocket.ir</a>
+            </div>
+
+            <div class="d-flex justify-content-between contact-item">
+              <span>
+                <i class="fa fa-envelope ps-1" aria-hidden="true"></i>
+                ایمیل
+              </span>
+              <a href="#">info@roocket.ir</a>
+            </div>
+
+            <div class="d-flex justify-content-between contact-item">
+              <span>
+                <i class="fa fa-envelope ps-1" aria-hidden="true"></i>
+                ایمیل
+              </span>
+              <a href="#">info@roocket.ir</a>
+            </div>
+            <div class="text-md-end text-center mt-3">
+              <img src="./assets/images/enamad.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- copy right -->
+        <div
+          class="copy-right mt-5 d-lg-flex text-center text-lg-end flex-row-reverse justify-content-between align-items-baseline"
+        >
+          <span class="line"></span>
+          <span>
+            کليه حقوق محصولات و محتوای اين سایت متعلق به راکت می باشد و هر گونه
+            کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست.
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
