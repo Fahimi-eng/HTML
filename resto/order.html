@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/css/persian-datepicker.min.css"/>
+    <script src="./assets/js/persian-date.min.js"></script>
+    <script src="./assets/js/persian-datepicker.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>رستوران</title>
+</head>
+<body dir="rtl" class="my-secondary-bg">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-square-caret-up"></i></button>
+        <!-- Main Container -->
+        <section class="my-4 mx-4 my-white-bg border-5">
+            <section class="container">
+                <!-- nav -->
+                <nav class="navbar justify-content-center navbar-expand-lg navbar-light bg-light mb-5 bg-white">
+                    <div class="container-fluid d-lg-none">
+                        <img src="./assets/images/logo.png" id="logo" width="100" class="navbar-brand" alt="">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="nav-bar navbar-nav">
+                            <li class="nav-item ml-5">
+                              <a class="nav-link " aria-current="page" href="#">پروفایل</a>
+                            </li>
+                            <li class="nav-item mx-5">
+                                <a class="nav-link " aria-current="page" href="order.html">رزرو</a>
+                            </li>
+                            <a href="index.html" class="navbar-brand mx-5">
+                                <img src="./assets/images/logo.png" id="logo" width="100" class="" alt="">
+                            </a>
+                            <li class="nav-item mx-5">
+                                <a class="nav-link" href="#menu">منو</a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="#about">درباره ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                  </nav>
+                <!-- end nav -->
+                
+                  <!-- start form -->
+                  <form id="regForm" action="" class="border border-3 rounded-3">
+
+                    <h1 class="mb-5">سفارش و رزرو</h1>
+                    
+                    <!-- One "tab" for each step in the form: -->
+                    <div class="tab mb-2 text-danger">
+                      <label for="name"><span class="fs-6">نام :</span></label>
+                      <p><input name="name" class="rounded-3" placeholder="نام خود را وارد کنید..." oninput="this.className = ''"></p>
+
+                      <label for="phone"><span class="fs-6">تلفن :</span></label>
+                      <p><input name="phone" class="rounded-3" placeholder="شماره موبایل..." oninput="this.className = ''"></p>
+
+                      
+                      <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div>
+                            <label for="date"><span class="fs-6">تاریخ :</span></label>
+                            <input name="date" placeholder="تاریخ رزرو..." oninput="this.className = ''" class="rounded-3 example1" type="text" />
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="ms-2">
+                                <label for="meal">وعده:</label>
+                                <select name="meal" id="selectbox" class="form-select form-control" aria-label="Default select example">
+                                    <option value="lunch" selected>نهار</option>
+                                    <option value="dinner">شام</option>
+                                </select>
+                            </div>
+    
+                            <div id="lunch-time">
+                                <label for="time"><span class="fs-6">ساعت :</span></label>
+                                <select name="time" id="time" class="form-select form-control" aria-label="Default select example">
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                </select>
+                            </div>
+    
+                            <div id="dinner-time" class="d-none">
+                                <label for="time">ساعت</label>
+                                <select name="time" id="time" class="form-select form-control" aria-label="Default select example">
+                                    <option value="11:00">19:00</option>
+                                    <option value="11:30">19:30</option>
+                                    <option value="12:00">20:00</option>
+                                    <option value="12:30">20:30</option>
+                                    <option value="13:00">21:00</option>
+                                    <option value="13:30">21:30</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    </div>
+                    
+                    <div class="tab">
+                        <div>
+                            <label for="guest"><span class="fs-6 text-danger">تعداد افراد :</span></label>
+                            <p><input type="number" min="0" max="10" name="guest" class="rounded-3" placeholder="تعداد ..." oninput="this.className = ''"></p>
+                        </div>
+                        <div>
+                            <label for="table" class="text-danger">انتخاب میز</label>
+                            <select name="table" id="table" class="form-select form-control" aria-label="Default select example">
+                                <option value="11:00"><span>میز شماره 1</span>-<span>2 نفره</span></option>
+                                <option value="11:00"><span>میز شماره 2</span>-<span>4 نفره</span></option>
+                                <option value="11:00"><span>میز شماره 3</span>-<span>1 نفره</span></option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row py-3 justify-content-between flex-wrap">
+                            <div class="mt-3 mt-md-0">
+                                <label for="" class="text-dark">انتخاب غذای فرد <span>1</span></label>
+                                <select name="food1" id="" class="form-select form-control" aria-label="Default select example">
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                </select>
+                            </div>
+                            <div class="mt-3 mt-md-0">
+                                <label for="" class="text-dark">انتخاب غذای فرد <span>2</span> </label>
+                                <select name="food2" id="" class="form-select form-control" aria-label="Default select example">
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                </select>
+                            </div>
+                            <div class="mt-3 mt-md-0">
+                                <label for="" class="text-dark">انتخاب غذای فرد <span>3</span></label>
+                                <select name="food3" id="" class="form-select form-control" aria-label="Default select example">
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span>قورمه سبزی</span></option>
+                                    <option value="11:00"><span> سبزی پلو با ماهی</span></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5" style="overflow:auto;">
+                      <div style="float:right;">
+                        <button class="btn btn-outline-danger" type="button" id="prevBtn" onclick="nextPrev(-1)">قبلی</button>
+                        <button class="btn btn-danger" type="button" id="nextBtn" onclick="nextPrev(1)">بعدی</button>
+                      </div>
+                    </div>
+                    
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                      <span class="step"></span>
+                      <span class="step"></span>
+                    </div>
+                    
+                    </form>
+                  <!-- end form -->
+
+                <!-- start footer -->
+                    <footer class="d-flex flex-column justify-content-between mt-5  flex-md-row pt-md-5">
+                        <div>
+                            <div style="width: 100px;" class="mx-auto mx-md-0">
+                                <img class="w-100 " src="./assets/images/logo.png" alt="logo">
+                            </div>
+                            <p class="text-wrap mx-auto mx-md-0 w-75 mt-3 text-center text-md-end">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و ب
+                                ا استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است 
+                            </p>
+                            <div class="d-flex justify-content-center justify-content-md-start">
+                                <div>
+                                   <a class="text-dark " href="#"> <i class="s-hover fa-brands fa-instagram"></i></a>
+                                </div>
+                                <div>
+                                    <a class="text-dark" href="#"><i class="s-hover fa-brands fa-facebook-f mx-5"></i></a>
+                                </div>
+                                <div>
+                                    <a class="text-dark" href="#"><i class="s-hover fa-brands fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 mt-md-0 mx-md-4" style="min-width: 300px;">
+                            <h5 class="text-center text-md-end">ساعت های کار</h5>
+                            <ul class="list-group text-center text-md-end">
+                                <li class="list-group-item border-0"><span class="text-danger">نهار:</span> <span>11 الی 14</span></li>
+                                <li class="list-group-item border-0"><span class="text-danger">شام:</span> <span>18 الی 22</span></li>
+                              </ul>
+                        </div>
+                        <div>
+                            <h5 class="mt-4 mt-md-0 text-center text-md-end">تماس با ما</h5>
+                            <p class="text-center">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
+                            </p>
+                            <ul class="list-group text-center text-md-end">
+                                <li class="list-group-item border-0"><span class="text-danger">شماره تماس :</span> 33390962-021</li>
+                                <li class="list-group-item border-0"><span class="text-danger">آدرس:</span> <span>تهران، شهر ری، دولت آباد</span></li>
+                              </ul>
+                        </div>
+
+                    </footer>
+                <!-- end footer -->
+                <div class="py-5 text-center ">
+                  <small>
+                    علیرضا فهیمی - پروژه دوره کارشناسی - دانشگاه صنعتی بیرجند
+                  <br>
+                  پاییز 1401
+                  </small>
+                </div>
+            </section>
+        </section>
+        <!-- End Main Container -->
+
+        <!-- scripts -->
+        <script src="./assets/js/js.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $(".example1").pDatepicker({
+                format: 'dddd,D,MMMM'
+              });
+            });
+          </script>
+
+        <script>
+            lunchTime = document.getElementById("lunch-time")
+            dinnerTime = document.getElementById("dinner-time")
+
+            selectBox = document.getElementById("selectbox")
+
+            selectBox.addEventListener("change",function(e){
+            if(this.value == "dinner"){
+                lunchTime.classList.add("d-none")
+                dinnerTime.classList.remove("d-none")
+            }
+            if(this.value == "lunch"){
+            dinnerTime.classList.add("d-none")
+            unchTime.classList.remove("d-none")
+            }
+            })
+        </script>
+</body>
+</html>
