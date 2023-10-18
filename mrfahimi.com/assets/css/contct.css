@@ -1,0 +1,138 @@
+:root{
+   --dark:#33313B;
+   --primary:#F9AB30;
+   --light:#F9FAFB;
+   --white:#fff;
+   --txt-color:#333333;
+   --light-txt-color: #A1A1A1;
+
+}
+body::before{
+   content: '';
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(130deg , rgba(250,180,0,.4),rgba(255,255,255,.2));
+        z-index: -100;
+}
+body{
+   color: var(--dark);
+   /* background-color: #111111; */
+   background-color: var(--light);
+   min-height: 100vh;
+}
+body::after{
+   content: '';
+        position: absolute;
+        bottom: 0;
+        right: -3%;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(130deg , rgba(250,180,0,.6),rgba(255,255,255,.2));
+        z-index: -5;
+}
+.primary-text{
+   color: var(--primary);
+}
+.header-text{
+   text-align: center;
+   font-weight: 600;
+}
+h2{
+   font-weight: 700;
+}
+.text{
+   font-weight: 600;
+}
+h4 span{
+   font-weight: 600;
+}
+.info p{
+   letter-spacing: 2px;
+   font-weight: 700;
+}
+.ico{
+   /* padding-right: 0.3rem; */
+   /* border-radius: 5px; */
+   border-right: 3px solid var(--primary);
+}
+.ico i{
+   font-size: 3rem;
+}
+
+/* ---------- form ------------ */
+.contact-form{
+   font-family: 'Vazir';
+   /* background-color: var(--dark); */
+   border-radius: 10px;
+   /* opacity: 0.7; */
+}
+@media (min-width: 991.98px){
+   .contact-form{
+      width: 45%;
+   }
+   body{
+      height: 100vh;
+      overflow-y: hidden;
+   }
+}
+.contact-form input,
+.contact-form textarea{
+   border: 0;
+   outline: 0;
+   background-color: #212121;
+   opacity: 0.8;
+   color: var(--light);
+   border-radius: 10px;
+   padding: 0.6rem ;
+   font-size: 16px;
+   font-weight: 500;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+   color: var(--light);
+}
+.contact-form textarea{
+   width: 100%;
+}
+.contact-form button{
+   border: 1px solid var(--primary);
+   background-color: var(--primary);
+   outline: 0;
+   width: 20%;
+   text-align: center;
+   border-radius: 15px;
+   transition: all 0.3s;
+   padding: 0.4rem 0.6rem;
+}
+ .contact-form button i{
+   font-size: 2.5rem;
+   border-radius: 15px;
+   color: #111111;
+   transition: all 0.3s;
+}
+.contact-form button span{
+  color: var(--dark);
+  padding:  0.4rem;
+  text-align: center;
+} 
+.contact-form input{
+   padding: 0.6rem ;
+}
+
+.contact-form button:hover{
+   width: 25%;
+}
+.contact-form button:hover i{
+   color: #111111;
+}
+.copy-right{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}

@@ -1,0 +1,161 @@
+:root{
+    --dark:#33313B;
+    --primary:#F9AB30;
+    --light:#F9FAFB;
+    --white:#fff;
+    --txt-color:#333333;
+    --light-txt-color: #A1A1A1;
+ 
+ }
+ .primary-text{
+    color: var(--primary);
+ }
+ body{
+     background-color: var(--light);
+     min-height: 100vh;
+ }
+ .about-me h1{
+     text-align: center;
+     font-weight: 700;
+ }
+ .bio{
+     text-align: center;
+     padding: 0 ;
+     color: #33313B;
+ }
+ @media (min-width: 991.98px){
+    .bio{
+        padding: 0 8rem;
+    }
+ }
+ .profile-info h2{
+     font-weight: 600;
+     text-align: center;
+ }
+ .profile-container{
+    border: 0;
+    
+ }
+ .profile-img{
+     width: 100%;   
+ }
+ .topic{
+     color: var(--light-txt-color);
+     /* padding-left: 20px; */
+     font-size: 1.1rem;
+ }
+ .feild{
+     color: #33313B;
+     font-size: 1.1rem;
+     font-weight: 600;
+ }
+ .topic,
+ .feild{
+     line-height: 2.6rem;
+ }
+ .profile-boxes{
+     grid-template-columns: auto;
+     width: 100%;
+    row-gap: 1.4rem;
+ }
+ @media (min-width: 991.98px){
+    .profile-boxes{
+        grid-template-columns: auto auto;
+        row-gap: 40px;
+        width: 50%;
+    }
+    .profile-info h2{
+        text-align: right;
+    }
+ }
+ @media (min-width: 767.98px){
+    .profile-boxes{
+        grid-template-columns: auto auto;
+        row-gap: 1.6rem;
+    }
+ }
+ .box-item{
+     width: 100%;
+     text-align: center;
+     /* border: 1px solid #33313B; */
+     margin-top: 1.4rem;
+     user-select: none;
+ }
+ .box-item>*{
+     display: block;
+ }
+ .box-item>i{
+     font-size: 2rem;
+ }
+ .box-item>span{
+     font-size: 1.4rem;
+     font-weight: 600;
+ }
+ /* ---------------skills------------ */
+ .skill-container{
+     row-gap: 10px;
+ }
+ .my-skills h2{
+     font-weight: 600;
+ }
+ .skill-item{
+     background-color: #fbf8cc;
+     border-radius: 10px;
+     padding: 0 ;
+     position: relative;
+     user-select: none;
+ }
+
+ .skill-name{
+     text-align: left;
+     color: var(--dark);
+     position: relative;
+     top: 25%;
+     left: 5%;
+     font-weight: 600;
+     text-wrap: nowrap;
+ }
+ .skill-progress{
+     background-color: var(--primary);
+     height: 100%;
+     border-radius: 10px;
+     width: 90%;
+ }
+ @media (min-width: 767.98px){
+    .skill-container{
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+    }
+ }
+ @media (min-width: 991.98px){
+    .skill-container{
+        grid-template-columns: auto auto auto auto;
+        column-gap: 10px;
+    }
+ }
+.beginner{
+    width: 30%;
+}
+.average{
+    width:50%;
+}
+.advanced{
+    width: 70%;
+}
+.expert{
+    width: 90%;
+}
+
+
+ .links{
+     
+ }
+ .links a{
+     margin: 0 auto;
+ }
+ /* .copy-right{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ } */
